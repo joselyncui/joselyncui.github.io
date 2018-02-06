@@ -1,4 +1,4 @@
-tzfeCommon.controller('GameCtrl', ['$scope', '$timeout', 'bestScore', 'GameService', function ($scope, $timeout, bestScore, gameService) {
+tzfeCommon.controller('GameCtrl', ['$scope', '$timeout', '$location','bestScore', 'GameService', function ($scope, $timeout, $location, bestScore, gameService) {
     $scope.bestScore = bestScore;
     $scope.currentScore = gameService.currentScore();
     $scope.grid = gameService.initGame();
@@ -10,7 +10,6 @@ tzfeCommon.controller('GameCtrl', ['$scope', '$timeout', 'bestScore', 'GameServi
         $scope.newScore = 0;
         $scope.gameInfo = gameService.getGameInfo();
     }
-	
 	
 	var updateScore = function(){
 		$scope.isAdd = true;
